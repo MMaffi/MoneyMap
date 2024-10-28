@@ -210,6 +210,7 @@ const body = document.getElementById("body");
 const resumeDivs = document.querySelectorAll(".resume > div");
 const inputs = document.querySelectorAll(".newItem input"); // Seleciona todos os inputs
 const selects = document.querySelectorAll(".newItem select"); // Seleciona todos os selects
+const modalmode = document.querySelectorAll(".modal-content"); // Seleciona todos os modais
 
 // Função para buscar o estado do dark mode
 const getDarkModeState = () => localStorage.getItem("dark_mode") === "true";
@@ -223,6 +224,11 @@ const setDarkModeState = (state) => {
 window.addEventListener("load", () => {
     const isDarkMode = getDarkModeState();
     body.className = isDarkMode ? "darkmodebody" : "whitemodebody"; 
+    
+    modalmode.forEach(modal => {
+        modal.className = isDarkMode ? "modal-content darkmodemodal" : "modal-content whitemodemodal"; // Aplica a classe a cada modal
+    });
+
     resumeDivs.forEach(div => {
         div.className = isDarkMode ? "darkmoderesumediv" : "whitemoderesumediv"; // Aplica a classe a cada div
     });
@@ -243,6 +249,11 @@ window.addEventListener("load", () => {
 darkmode.addEventListener("change", () => {
     const isChecked = darkmode.checked;
     body.className = isChecked ? "darkmodebody" : "whitemodebody"; // Troca a classe do body
+    
+    modalmode.forEach(modal => {
+        modal.className = isChecked ? "modal-content darkmodemodal" : "modal-content whitemodemodal"; // Aplica a classe a cada modal
+    });
+
     resumeDivs.forEach(div => {
         div.className = isChecked ? "darkmoderesumediv" : "whitemoderesumediv"; // Aplica a classe a cada div
     });
