@@ -64,6 +64,7 @@ main {
     align-items: end;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .divDesc, .divType, .divAmount {
