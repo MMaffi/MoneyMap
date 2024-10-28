@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #F7F7F7    ;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILO TOTAIS */
+
+.resume {
+    display: flex;
+    padding: 10px 0;
+    gap: 90px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume>div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 190px;  
+}
+
+
+.resume span.incomes {
+    color: #00C9A7;
+    text-align: end;
+}
+
+.resume span.expenses {
+    color: #D83121;
+    text-align: end;
+}
+
+.resume span.total {
+    text-align: end;
+}
+
+/* ESTILO NOVO ITEM */
+
+.newItem {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+}
+
+.divDesc, .divType, .divAmount {
+    display: flex;
+    flex-direction: column;
+}
+
+.newItem>button {
+    background-color: #85C1AE;
+    color: black;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px; 
+}
+
+.newItem>button:hover {
+    background-color: #5AB292;
+}
+
+/* ESTILO INPUTS */
+
+input {
+    width: 250px;
+    
+}
+
+select {
+    cursor: pointer;
+    
+}
+
+input, select {
+    padding: 5px;
+}
+
+/* ESTILO TABELA */
+
+.divTable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+table {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+th {
+    text-align: start;
+    border-bottom: inset;
+    padding-bottom: 5px;
+}
+
+tbody td {
+    border-bottom: inset;
+    padding: 10px;
+}
+
+.columnAction {
+    width: 40px;
+    text-align: center;
+}
+
+.columnAction>button {
+    background: transparent;
+    border: none;
+}
+
+.columnAmount {
+    width: 30%;
+}
+
+.columnType {
+    width: 80px;
+    text-align: center;
+}
+
+/* ESTILO ICONES */
+
+i {
+    font-size: 25px;  
+    padding-top: 6px;
+}
+
+.bxs-plus-circle {
+    color: #00C9A7;
+}
+
+.bxs-minus-circle {
+    color: #D83121;
+}
+
+/* ESTILO DO LIMPAR LOCAL STORAGE */
+
+.limparstorage {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.limparstorage button {
+    background-color: #f1b100;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+    display: flex;
+    align-items: center;   
+}
+
+.limparstorage button:hover {
+    background-color: #b88700;
+}
+
+.limparstorage button i {
+    font-size: 20px;
+    padding-bottom: 6px;
+    padding-right: 3px;
+}
+
+/* ESTILO MODAL */
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixa na tela */
+    z-index: 1; /* Fica em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: hidden; /* Permite rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Fundo com transparência */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px; /* Largura do modal */
+    text-align: center; 
+    border-radius: 10px;  
+}
+
+.modal-content .botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+
+.modal-content .btnOK {
+    display: flex;
+    justify-content: end;
+    margin-top: 15px;
+}
+
+.modal-content button {
+    background-color: #f1b100;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+    align-items: center;    
+}
+
+.modal-content button:hover {
+    background-color: #b88700;
+}
+
+.modalsaibamais {
+    width: 900px;
+}
+
+.modalsaibamais p {
+    margin-top: 10px;
+}
+
+/* ESTILO COPYRIGHT */
+
+/* .direitos {
+    position: fixed;
+    font-size: 10px;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+} */
+
+.direitosconfig {
+    position: static;
+    margin-bottom: -15px;
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+/* ESTILO LINKS */
+
+.linkGit {
+    position: fixed;
+    top: 0px;
+    right: 8px;
+    transition: .3s;
+}
+
+.linkGit:hover {
+    transform: scale(1.2);
+}
+
+.linkGit i {
+    font-size: 50px;
+    color: black;
+}
+
+.logosite {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.logosite:hover {
+    transform: scale(1.2);    
+}
+
+.logosite img {
+    width: 45px;
+    height: 45px;
+}    
+
+/* ESTILO CONFIG */
+
+.btnconfig {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btnconfig i {
+    font-size: 40px;
+    position: fixed;
+    bottom: 10px;
+    left: 8px;
+}
+
+/* ESTILO MODAL CONFIG */
+.modal-content .topo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-content .tituloconfig {
+    margin-top: -15px;
+}
+
+.modal-content .btconfigfechar {
+    background-color: red;
+    color: black;
+    font-size: 30px; 
+    width: 0px;
+    height: 0px;
+    margin-top: -20px;
+}
+
+.modal-content .btconfigfechar:hover {
+    background-color: transparent;
+}
+
+
+/* ESTILO TROCA DE MODO (DARK AND LIGHT) */
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 7em;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+
+
+/* MUDANÇAS CORES DO DARK AND WHITE MODE */
+.darkmodebody {
+    background-color: gray;
+}
+
+.whitemodebody {
+    background-color: #F7F7F7;
+}
+
+.resume > div.darkmoderesumediv {
+    box-shadow: 0px 0px 5px #2b2b2b;    
+}
+
+.resume > div.whitemoderesumediv {
+    box-shadow: 0px 0px 5px #ccc;   
+}
+
+input.darkmodeinput {
+    background-color: #ccc; /* Cor de fundo para o modo escuro */    
+}
+
+input.whitemodeinput {
+    background-color: defaut; /* Cor de fundo para o modo claro */
+}
+
+select.darkmodeselect {
+    background-color: #ccc; /* Cor de fundo para o modo escuro */
+}
+
+select.whitemodeselect {
+    background-color: defaut; /* Cor de fundo para o modo claro */
+}
