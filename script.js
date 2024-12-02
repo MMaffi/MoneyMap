@@ -235,7 +235,7 @@ window.addEventListener("load", () => {
 
     // Aplica a classe para inputs
     inputs.forEach(input => {
-        input.className = isDarkMode ? "darkmodeinput" : "whitemodeinput"; // Aplica a classe para cada input
+        input.className = isDarkMode ? "darkmodeinput" : "whitemodeinput"; // Aplica a classe para cada inputdasdasddasd
     });
 
     // Aplica a classe para selects

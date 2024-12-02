@@ -89,17 +89,16 @@ main {
 /* ESTILO INPUTS */
 
 input {
-    width: 250px;
-    
+    width: 250px; 
 }
 
 select {
     cursor: pointer;
-    
 }
 
 input, select {
     padding: 5px;
+    background-color: #dadada;    
 }
 
 /* ESTILO TABELA */
@@ -352,10 +351,10 @@ i {
 
 /* The switch - the box around the slider */
 #theme-toggle-button {
-    font-size: 17px;
+    font-size: 10px;
     position: relative;
     display: inline-block;
-    width: 3em;
+    width: 5em;
     cursor: pointer;
   }
   
@@ -422,8 +421,15 @@ i {
     opacity: 1;
   }
 
-p.color-mode {
-    margin-bottom: -30px;
+.colormode {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: start;
+}
+
+.colormode label {
+    margin-bottom: -10px;
 }
 
 /* MUDANÇAS CORES DO DARK AND WHITE MODE */
@@ -444,7 +450,7 @@ p.color-mode {
 }
 
 input.darkmodeinput {
-    background-color: #ccc; /* Cor de fundo para o modo escuro */    
+    background-color: #dadada; /* Cor de fundo para o modo escuro */     
 }
 
 input.whitemodeinput {
@@ -452,7 +458,7 @@ input.whitemodeinput {
 }
 
 select.darkmodeselect {
-    background-color: #ccc; /* Cor de fundo para o modo escuro */
+    background-color: #dadada; /* Cor de fundo para o modo escuro */
 }
 
 select.whitemodeselect {
