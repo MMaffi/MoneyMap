@@ -1,18 +1,18 @@
-# 💰 Controle de Gastos  
+# 💰 Expense Control  
 
-Um aplicativo simples e intuitivo para gerenciar suas finanças pessoais, permitindo registrar despesas, visualizar totais e manter o controle do seu dinheiro.  
+A simple and intuitive app to manage your personal finances, allowing you to record expenses, view totals, and keep track of your money.  
 
-## 🚀 Funcionalidades  
-✅ Adicionar e remover despesas  
-✅ Categorização dos gastos  
-✅ Cálculo automático do saldo disponível  
-✅ Interface responsiva e fácil de usar  
-✅ Armazenamento local dos dados (LocalStorage)  
+## 🚀 Features  
+✅ Add and remove expenses  
+✅ Categorize expenses  
+✅ Automatic calculation of available balance  
+✅ Responsive and easy-to-use interface  
+✅ Local data storage (LocalStorage)  
 
-## 🛠 Tecnologias Utilizadas  
-- **HTML** → Estrutura do site  
-- **CSS** → Estilização e responsividade  
-- **JavaScript** → Funcionalidade e manipulação dos dados  
+## 🛠 Technologies Used  
+- **HTML** → Website structure  
+- **CSS** → Styling and responsiveness  
+- **JavaScript** → Functionality and data manipulation  
 
-## 📌 Contribuição
-- Sinta-se à vontade para sugerir melhorias ou abrir issues no repositório.
+## 📌 Contribution  
+- Feel free to suggest improvements or open issues in the repository.
